@@ -12,7 +12,7 @@ ls */complete.html
  33983(bytes)
 
  List all "Act 6" files in all plays. 
-ls */act6* or 
+ls -l */act6* or 
 ls -la */*6* or 
 find | grep act6
 
@@ -29,7 +29,8 @@ grep -l "for Ireland" */complete.html | wc -l
 
  Show all lines in the complete.html files that contain "Scot" but not "Scots" or "Scotland" or "Scottish". 
  grep -i SCOT */complete.html  | grep -v "Scots\|Scotland\|Scottish" or
- grep -w "Scot" */complete.html
+ grep -w "Scot" */complete.html or
+ grep Scot */complete.html | grep -v Scots | grep -v Scotland | grep -v Scottish
 
  How many times does the string "Scotland" appear in Act 3 of a Shakespeare play? Q. How would you find the answer to the previous using Google? 
  grep -w "Scot" */act3* | wc -l
